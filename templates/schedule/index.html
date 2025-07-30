@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="my-4">Event List</h1>
+<div class="list-group">
+    {% for event in events %}
+    <a href="{% url 'schedule:detail' event.id %}" class="list-group-item list-group-item-action">{{ event.event_name }}</a>
+    {% endfor %}
+</div>
+{% endblock %}

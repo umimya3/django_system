@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="my-4">{{ event.event_name }}</h1>
+
+<div class="mb-3">
+    <p><strong>Date:</strong> {{ event.event_date }}</p>
+    <p><strong>Memo:</strong> {{ event.memo }}</p>
+</div>
+
+<h2 class="my-3">Candidates</h2>
+<ul class="list-group mb-4">
+    {% for candidate in event.candidate_set.all %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>{{ candidate.candidate_date }} - <span class="badge bg-primary rounded-pill">{{ candidate.attendance }} vote{{ candidate.attendance|pluralize }}</span></span>
+        <form action="{% url 'schedule:vote' event.id candidate.id %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary btn-sm">Vote</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'schedule:index' %}" class="btn btn-secondary">Back to list</a>
+{% endblock %}

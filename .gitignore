@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.so
+
+# Caches
+.Python
+.pytest_cache/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Editors
+.vscode/
+.idea/
+
+# Django stuff:
+*.log
+*.pot
+*.mo
+*.sqlite3
+media/
+static/ # collectstaticで生成される静的ファイルは含めない
+
+# My custom files
+command.txt
+djangouser.txt
