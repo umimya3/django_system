@@ -9,6 +9,15 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
+#nyahello world
+#lady go??
+
+
+#
+#
+#
+#
+#
 
 import os
 import dj_database_url
