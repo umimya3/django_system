@@ -6,7 +6,7 @@ class ScheduleConfig(AppConfig):
     name = 'schedule'
 
     def ready(self):
-         DEBUGモードの時だけ実行
+         #DEBUGモードの時だけ実行
          if os.environ.get('DEBUG') == 'True':
              from django.contrib.auth import get_user_model
              User = get_user_model()
